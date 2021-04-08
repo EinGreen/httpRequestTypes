@@ -1,10 +1,14 @@
 let ajax = new XMLHttpRequest();
+let postContainer = document.getElementById('postContainer');
 
 function postBlog(eventDetails) {
     ajax.onreadystatechange = function() {
         // when you send a post request, you normally get a 201 response
         if(this.readyState === 4 && this.status === 201) {
             console.log(this.responseText);
+            postContainer.innerHTML += `<h4>${postObject.title}</h4>`;
+            postContainer.innerHTML += `<h6>UserId: ${postObject.userId}</h6>`;
+            postContainer.innerHTML += `<p>${postObject.body}</p>`;
         }
     }
     ajax.open("POST", "https://jsonplaceholder.typicode.com/posts", true);
@@ -21,4 +25,4 @@ function postBlog(eventDetails) {
 }
 
 let postButton = document.getElementById("postButton");
-postButton.addEventListener("click", postBlog)
+postButton.addEventListener("click", postBlog);
