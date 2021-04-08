@@ -13,6 +13,7 @@
     </header>
 
     <main>
+        <button id="getPostButton">Get All Posts</button>
         <form action="javascript:void(0)">
             <h3>Your Post</h3>
             <input type="text" id="postTitle" placeholder="title">
@@ -21,15 +22,23 @@
             <br>
             <input id="postButton" type="submit" value="Submit Post">
             <p id="successMessage">Awaiting Orders</p>
-        </form>
-        <form action="javascript:void(0)">
+            <br>
+            <h3>Update Post</h3>
+            <input type="text" id="postId" placeholder="Post id">
+            <br>
+            <input type="text" id="updateTitle" placeholder="title">
+            <br>
+            <input type="text" id="updateBody" placeholder="post">
+            <br>
+            <input id="updateButton" type="submit" value="Update Post">
+            <br>
             <h3>Delete Post</h3>
-            <input type="text" id="enemyId" placeholder="Post ID">
+            <input type="text" id="enemyId" placeholder="Post id">
             <input id="destoryButton" type="submit" value="Delete Enemy">
         </form>
-        <button>Get Post</button>
+        <br>
 
-        <section id="postContainer"></section>
+        <article id="postContainer"></article>
     </main>
     
     <script src="js/app.js"></script>
