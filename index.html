@@ -7,14 +7,27 @@
     <title>Post Simulation</title>
 </head>
 <body>
+    <header>
+        <h1>Blog Simulation</h1>
+        <p>For Tests</p>
+    </header>
+
     <main>
         <form action="javascript:void(0)">
+            <h3>Your Post</h3>
             <input type="text" id="postTitle" placeholder="title">
             <br>
             <input type="text" id="postBody" placeholder="post">
             <br>
-            <input id="postButton" type="submit" value="post the post">
+            <input id="postButton" type="submit" value="Submit Post">
+            <p id="successMessage">Awaiting Orders</p>
         </form>
+        <form action="javascript:void(0)">
+            <h3>Delete Post</h3>
+            <input type="text" id="enemyId" placeholder="Post ID">
+            <input id="destoryButton" type="submit" value="Delete Enemy">
+        </form>
+        <button>Get Post</button>
 
         <section id="postContainer"></section>
     </main>
